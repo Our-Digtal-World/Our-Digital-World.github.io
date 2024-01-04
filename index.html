@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疆域</title>
+    <link rel="stylesheet" href="css&js/parallax.css">
+    <link rel="stylesheet" href="css&js/index.css">
+    <link rel="stylesheet" href="css&js/menu.css">
+    <script src="css&js/scrollreveal.js"></script>
+    <script src="css&js/scrollreveal.min.js"></script>
+    <script src="css&js/CloudOpen.js"></script>
+    <script src="css&js/page.js"></script>
+    <link rel="stylesheet" type="text/css" href="css&js/page.css">
+    <link rel="stylesheet" type="text/css" href='css&js/all.min.css'>
+    <link rel="stylesheet" type="text/css" href='css&js/scan.css'>
+    <link rel="stylesheet" type="text/css" href='css&js/highlight.css'>
+    <link rel="stylesheet" type="text/css" href='css&js/magic.css'>
+</head>
+
+<body>
+    <input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
+    <label for="page-nav-toggle">
+        <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+            <g class="icon-group" id="icongroup">
+                <g class="icon--menu"><a onclick="openNav()">
+                        <path d="M 6 0 L 54 0" />
+                        <path d="M 6 15 L 54 15" />
+                        <path d="M 6 30 L 54 30" />
+                    </a>
+                </g>
+                <g class="icon--close"><a onclick="closeNav()">
+                        <path d="M 15 0 L 45 30" />
+                        <path d="M 15 30 L 45 0" />
+                    </a>
+                </g>
+            </g>
+        </svg>
+    </label>
+    <nav class="main-navigation" id="myNav">
+        <ul>
+            <li><a class="close mu" onclick="closeNav()" href="#xuyan">
+                    <!-- <span style="font-family: 'monster';">0</span> -->
+                    序言</a></li>
+            <li><a class="close mu" onclick="closeNav()" href="#part1"><span
+                        style="font-family: 'monster';">0</span>第一幕</a></li>
+            <li><a class="close mu" onclick="closeNav()" href="#part2"><span
+                        style="font-family: 'monster';">0</span>第二幕</a></li>
+            <li><a class="close mu" onclick="closeNav()" href="#part3"><span
+                        style="font-family: 'monster';">0</span>第三幕</a></li>
+            <li><a class="close mu" onclick="closeNav()" href="#part4"><span
+                        style="font-family: 'monster';"></span>尾声</a></li>
+            <!-- <li><a class="close" onclick="closeNav()" href="#part5">05&nbsp; &nbsp; &nbsp;第五幕</a></li> -->
+        </ul>
+    </nav>
+
+    <section id="xuyan">
+        <!-- <iframe src="iframe/stars/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe> -->
+        <img src="img/colorful.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div style="position: absolute;">
+            <img src="img/logo.png" class="wenzi5" style="position: absolute;width: 30vw;top: 20vh;left: 35vw;">
+            <img src="img/title.png" class="wenzi5" style="position: absolute;width: 36vw;top: 70vh;left: 32vw;">
+            <!-- <img  src="img/xuyantip.png"  style="position: absolute;width: 100vw;"> -->
+        </div>
+        <audio src="music/bgm.mp3"  autoplay="autoplay" loop="loop" controls="control" preload="auto" style="position: absolute;bottom: 0;"></audio>
+
+
+
+    </section>
+    <section class="top-parallax">
+        <!-- <iframe src="iframe/stars/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe> -->
+        <img src="img/colorful-reverse.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div style="position: absolute;color: rgb(248, 178, 87);display: flex;flex-direction: column;justify-content:center;align-items: center;font-family: 'snow';"
+            class="fadein" data-animate="fadein">
+            <h3 style="font-size:30px; margin: 8px;">这里是疆域，</h3>
+            <h3 style="font-size:30px; margin: 8px;">一个由数据组成的世界。</h3>
+            <h3 style="font-size:30px; margin: 8px;">疆域之心，</h3>
+            <h3 style="font-size:30px; margin: 8px;">依靠各国节点维系运转的机械心脏，</h3>
+            <h3 style="font-size:30px; margin: 8px;">为疆域空间的存续提供必要的能量。</h3>
+            <h3 style="font-size:30px; margin: 15px;">. . . . . .</h3>
+        </div>
+        <div class="scroll-container2" style="width: 100vw; position: absolute;left: 49vw;top:70vh;margin-top: 30px;">
+            <div class="chevron2"></div>
+            <div class="chevron2"></div>
+            <div class="chevron2"></div>
+            <!-- <span class="text">Scroll down</span> -->
+        </div>
+
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="img/prospect-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/planet copy/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+    <!-- <section class="top-parallax">
+        <img src="img/prospect-bg.png" alt="" id="hill1"></img>
+
+        <img src="img/prospect-cloud1.png" alt="" id="hill2"></img> 
+        <img src="img/prospect-grass1.png" alt="" id="hill4"></img>
+        <img src="img/prospect-grass2.png" alt="" id="hill5"></img>
+
+
+        <img src="img/prospect-cloud2.png" alt="" id="hill3"></img>
+        <img src="img/prospect-heart.png" alt="" id="hill0"></img>
+        <h3 class="dialog" id="dialog">这里是疆域，一个由数据组成的世界。</h3>
+        <h3 class="dialog1" id="dialog1">疆域之心——依靠各国节点维系运转的机械心脏，为疆域空间的存续提供必要的能量。</h3>
+    </section> -->
+
+
+    <section class="attack">
+        <img src="img/huahen.png" style="width: 100%;height: 100vh;position: absolute;">
+        <canvas id="c" style="display:block;position: absolute;"></canvas>
+        <div>
+            <div class="txt" data-text="数据3024年，疆域受到不明外界攻击">
+                数据3024年，疆域受到不明外界攻击
+            </div>
+            <div class="txt1" data-text="部分节点瘫痪，疆域之心坠毁，多国基础设施停转，四下一片荒芜">
+                部分节点瘫痪，疆域之心坠毁，多国基础设施停转，四下一片荒芜
+            </div>
+        </div>
+
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="img/wild-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/planet/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+
+    <section style="position: relative;">
+        <!-- <img src="img/heart-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <img src="img/heart.png" style="position: absolute;width: 1000px;top:10%;" id="heart"> -->
+        <!-- <img src="img/bg-fr.png" style="position: absolute;width: 100%;height: 100vh;"> -->
+        <iframe src="iframe/poster/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/star/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div style="position: absolute;" class="wenzi1">
+            <h3 class="mu" id="part1" style="color: white;font-size: 150px;">第一幕</h3>
+            <h3 class="mu" id="part1" style="color: white;font-size: 60px;font-family: 'snow';letter-spacing: 0.3em;margin-top: 80px;"> 数寻 · 疆域遭难，发现危机</h3>
+        </div>
+    </section>
+
+    <section style="position: relative;">
+        <img src="img/filter.png" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/wakeup/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div class="wenzi1"
+            style="position: absolute;font-family: 'snow'; font-size: 45px;letter-spacing:5px;font-weight: bolder;bottom: 12vh;">
+            <p style="text-align: center; width: 100vw;z-index: 5;color: #dadada;">你从黑暗中苏醒过来……</p>
+        </div>
+        </div>
+        <img class="wenzi8" src="img/wakeup-dialog1.png" style="position: absolute;width: 100%;height: 100vh;">
+        <img class="wenzi11" src="img/wakeup-dialog2.png" style="position: absolute;width: 100%;height: 100vh;">
+
+    </section>
+
+    <section style="position: relative;overflow: hidden;">
+        <!-- <div class="wenzi1"
+            style="position: absolute;font-family: 'pixel'; font-size: 50px;letter-spacing:5px;font-weight: bolder;left: 150px;top: 100px;">
+            “我是谁？”
+        </div>
+        <div class="wenzi1"
+            style="position: absolute;font-family: 'pixel'; font-size: 50px;letter-spacing:5px;font-weight: bolder;right: 150px;top:150px;">
+            “这是哪里？”
+        </div>
+        <div class="wenzi1"
+            style="position: absolute;font-family: 'pixel'; font-size: 50px;letter-spacing:5px;font-weight: bolder;top: 270px;">
+            <p style="text-align: center; width: 100vw;">这里似乎遭受了一场劫难</p>
+            <p style="text-align: center; width: 100vw; font-size: 20px;margin-top: 20px;">移动鼠标至发光处查看详情</p>
+        </div> -->
+
+
+        <!-- <iframe src="iframe/screen-scan/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe> -->
+        <div class="screen">
+            <!-- <div class="wenzi1"
+                style="position: absolute;font-family: 'snow'; font-size: 60px;letter-spacing:5px;font-weight: bolder;left: 160px;top: 8vh;">
+                “我是谁？”
+            </div>
+            <div class="wenzi1"
+                style="position: absolute;font-family: 'snow'; font-size: 60px;letter-spacing:5px;font-weight: bolder;right: 160px;top:16vh;">
+                “这是哪里？”
+            </div> -->
+
+
+            <div
+                style="position: absolute;font-family: 'snow'; display: flex;flex-direction: column;justify-content:center;align-items: center;top: 12vh;left: 0;">
+                <div data-animate="printword1" style="font-size:80px; letter-spacing:0.1em; ">
+                    这里似乎遭受了一场劫难
+                </div>
+                <h3 style="text-align: center; width: 100vw;letter-spacing: 0.2em; font-size: 30px;margin-top: 30px;"
+                    class="shuru">移动鼠标至发光处查看详情</h3>
+            </div>
+        </div>
+
+        <div class="light1">
+            <span class="tooltiptext1">
+                <img src="img/huawen.png">
+                木马是一个拥有强大<b
+                    style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">潜入和复制能力</b>的神秘生物。它被赋予了邪恶的力量，在无声无息中侵入疆域，<b
+                    style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">窃取</b>居民的<b
+                    style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">个人信息</b>甚至进行绑架、精神控制等暴行。木马具有极高的隐蔽性，难以被发现和清除，造成巨大威胁。<br>
+                <span class="jiema">解码：现实世界中的<b
+                        style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">恶意软件和病毒</b>，如木马病毒等寄生于被控制的计算机系统中，具有很强的隐蔽性，可以根据黑客意图突然发起攻击，实施<b
+                        style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">窃取数据、监控、资料修改</b>等非法操作。</span>
+                <img src="img/monster3-text.png" style="width: 28vw;">
+            </span>
+            <img src="img/Muma.png"
+                style="position: absolute; bottom: 10vh;left: 45vw;width: 10vw;filter: drop-shadow(0px 0px 50px rgb(192, 243, 186));">
+        </div>
+        <div class="light2">
+            <span class="tooltiptext2">
+                <img src="img/huawen.png">
+                个人数据的独有性是疆域内个体生命力的主要来源。中心国的国民小素，被剽窃怪窃取了其个人性数据，后将其数据进行<b
+                    style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">病毒性复制</b>，再制疆域公民身份，并用于非法行为如数据走私、违禁品贩卖中。小素随着个人数据独有性的流失而逐渐虚弱，更糟糕的是，由于被管制中心多次记录非法行为，面临着即将被强制抹杀的情形。<br>
+                <span class="jiema">解码：<b
+                        style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">身份盗用</b>（identity
+                    theft）是一种盗用如社会安全号码、身份证号、信用卡账号密码之类的他人重要个人信息，利用假扮成他人或者虚拟身份，以便自己实施违法犯罪的行为。</span>
+                <img src="img/monster1-text.png" style="width: 28vw;">
+            </span>
+            <img src="img/shoushang.png"
+                style="position: absolute; bottom: 3vh;right: 8vw;width: 25vw;filter: drop-shadow(0px 0px 50px rgb(192, 243, 186));">
+        </div>
+        <div class="light3">
+            <span class="tooltiptext3">
+                <img src="img/huawen.png">
+                疆域中的城堡阁楼由无数的<b
+                    style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">数据块</b>构成。灾变之后，中心国大多数建筑结构已被破坏，外墙剥落，窗户破碎。据说，这些建筑的材料已被一个神秘的巨人吸纳，供其掌控与使用。<br>
+                <span class="jiema">
+                    解码：通过强大的技术和资本力量，大量数据被<b
+                        style="color: rgb(99, 40, 30);font-size: 18px;font-weight: 600;">数据垄断者</b>收集、挖掘、使用，而这些数据可能被用于不正当的目的。</span>
+                <img src="img/monster2-text.png" style="width: 28vw;margin: auto;">
+            </span>
+            <img src="img/Ruin.png"
+                style="position: absolute; bottom: 10vh;left: 8vw;width:20vw;filter: drop-shadow(0px 0px 70px  rgb(210, 250, 206));">
+        </div>
+
+
+
+    </section>
+
+
+    <section style="position: relative;overflow: hidden;">
+        <img src="img/stone-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div>
+            <img src="img/weakhand.png" class="wenzi2" style="position: absolute;z-index: 1;width: 90vw;">
+            <img src="img/weakhand-dialog1.png" class="wenzi10" style="position: absolute;z-index: 1;width: 90vw;">
+            <img src="img/weakhand-dialog2.png" class="wenzi11" style="position: absolute;z-index: 1;width: 90vw;">
+            <img src="img/stone-bg0.png" class="wenzi11" style="position: absolute;z-index: 1;width: 100vw;">
+        </div>
+        <div>
+            <img src="img/people-stoneback.png" style="position: absolute;z-index: 1;right: 18vw;bottom: 5vh;">
+        </div>
+        <img class="stoneimg1 draggable" src="img/stone1.png">
+        <img class="stoneimg2 draggable" src="img/stone2.png" />
+    </section>
+
+
+    <section style="position: relative; ">
+        <img src="img/stone-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div style="position: absolute;">
+            <img src="img/dialog-top.png" class="wenzi8" style="position: absolute;width: 100vw;">
+            <img src="img/dialog-middle.png" class="wenzi9" style="position: absolute;width: 100vw;">
+            <img src="img/dialog-bottom1.png" class="wenzi6" style="position: absolute;width: 100vw;">
+            <img src="img/dialog-bottom2.png" class="wenzi7" style="position: absolute;width: 100vw;">
+        </div>
+    </section>
+
+
+
+    <!-- 魔法书 -->
+    <section style="position: relative;">
+        <img src="img/magicbook-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div class="section section6" id="shuben">
+            <div class="htmleaf-container">
+                <div class='pages'>
+                    <input id='one' name='trigger' type='radio'>
+                    <input id='two' name='trigger' type='radio'>
+                    <input id='three' name='trigger' type='radio'>
+                    <input id='four' name='trigger' type='radio'>
+
+                    <div class='pages_page'>
+                        <img src="img/book-left.png" style="width: 100%;position: absolute;">
+                        <img src="img/magiclogo-purple.png" style="width: 50%;position: absolute;top:25%;left: 25%;">
+                        <div class='pages_page__inner'>
+                            <!-- <div class='logo'>慢性病</div> -->
+                            <div class='pagenumber'>1 2</div>
+                            <div class='content'>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第一页右半部分 -->
+                    <div class='pages_page'>
+                        <img src="img/book-right.png" style="width: 100%;position: absolute;">
+                        <div class='pages_page__inner'>
+                            <div class='content '>
+                                <!-- <div class='overlay'></div> -->
+                                <!-- 蒙版 -->
+                                <div class=" book-article" style="margin-top: 22%;text-align: center;">
+                                    <p style="font-size: 30px;margin-bottom: 20px;letter-spacing: 0.2em;">疆域之心
+
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">数据元年，勇士数娲，
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">疆域穿行，无人之境。
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">黑暗迷雾，怪物潜伏，
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;margin-bottom: 15px;">法杖在手，力量蕴藏。
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">勇士紧握法杖，眼神坚定如钢，
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;font-weight: 600;color: #964A34;">“安全”之盾护佑人民。
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">疆域整合为一，人民携手共进，
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;font-weight: 600;color: #964A34;">“合作”碎片闪耀光芒。
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">出征斩妖除魔，击败邪恶混沌,
+                                    <p
+                                        style="line-height: 23px;letter-spacing: 0.2em;margin-bottom: 15px;font-weight: 600;color: #964A34;">
+                                        “普惠”明珠熠熠生辉。
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;font-weight: 600;color: #964A34;">
+                                        三大碎片汇聚一体，疆域之心应运而生，
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">疆域扩大，和平永驻，
+                                    <p style="line-height: 23px;letter-spacing: 0.2em;">数娲勇士的名字永载史册。</p>
+
+                                </div>
+                            </div>
+                            <div class='control next'>
+                                <label for='two'></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第二页左半部分 -->
+                    <div class='pages_page'>
+                        <img src="img/book-left.png" style="width: 100%;position: absolute;transform: rotateY(180deg);">
+                        <div class='pages_page__inner'>
+                            <!-- <div class='logo'>慢性病</div> -->
+                            <div class='pagenumber'>3 4</div>
+                            <div class='control'>
+                                <label for='one'></label>
+                            </div>
+                            <div class='content'>
+                                <div class=" book-article" style="margin-top: 22%;text-align: center;">
+                                    <p style="font-size: 30px;margin-bottom: 20px;letter-spacing: 0.2em;">疆域守护准则
+
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">疆域广袤，星辰闪烁，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">数据居民共生共存，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;margin-bottom: 15px;">各国节点紧密相连。
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">疆域之心，世界引擎，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">驱动疆域运转，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;margin-bottom: 15px;">节点持续供能。
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;font-weight: 600;color: #964A34;">唯有我们互相依存、互相支持，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">才能共同构建美好的疆域。
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">唯有每个节点健康正常运作，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;margin-bottom: 15px;">
+                                        才能确保疆域之心的永续运转。
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">疆域之心见证辉煌历程，
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">照亮我们未来前行的道路。
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第二页右半部分 -->
+                    <div class='pages_page'>
+                        <img src="img/book-right.png" style="width: 100%;position: absolute;">
+                        <div class='pages_page__inner'>
+                            <div class='control next'>
+                                <label for='three'></label>
+                            </div>
+                            <div class='content'>
+                                <div class=" book-article" style="margin-top: 150px;text-align:justify;">
+                                    <p
+                                        style="font-size: 30px;margin-bottom: 20px;letter-spacing: 0.2em;font-weight: 600;">
+                                        “繁荣之种”魔法
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">
+                                        <span class='zhongdian' style="    font-weight: 600;
+                                       ">类型</span>：增益魔法<br>
+                                        <span class='zhongdian' style="    font-weight: 600;
+                                        ">效果</span>：为数据相关的活动注入强大的增益能量，激活<span class='zhongdian' style="    font-weight: 600;
+                                          ">数据生产、流通和使用</span>过程中的活力，促进繁荣发展。它激发参与方的积极性和创造力，<span class='zhongdian'
+                                            style="    font-weight: 600;
+                                           ">提升数据处理的专业性和效率</span>，为经济社会发展注入新活力。
+
+                                        <!-- <div class="magicbook-code1 " style="position:absolute; z-index: 15;">轻触解码:</div> -->
+                                    <div
+                                        style="font-size: 15px;color: rgb(136, 103, 75);margin-top: 10px;margin-bottom: 10px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                                        轻触解码 ↓</div>
+                                    <div class="code-content v3" style="text-align:justify;">
+                                        <p style="display: inline;
+                                    background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+                                            <span class='zhongdian' style="    font-weight: 600;
+                                            ">《数据二十条》提出</span>分别界定数据生产、流通、使用过程中各参与方享有的合法权利，建立<span class='zhongdian'
+                                                style="    font-weight: 600;
+                                               ">数据资源持有权、数据加工使用权、数据产品经营权</span>等“三权分置’的产权运行机制。在依法依规前提下，通过合同、协议等方式，数据持有者有权利授权数据处理者进行加工、开发、使用，促进“专业的人做专业的事’，形成数据产品和服务，为经济社会发展做贡献。
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第三页左半部分 -->
+                    <div class='pages_page'>
+                        <img src="img/book-left.png" style="width: 100%;position: absolute;transform: rotateY(180deg);">
+                        <div class='pages_page__inner'>
+                            <!-- <div class='logo'>慢性病</div> -->
+                            <div class='pagenumber'>5 6</div>
+                            <div class='content'>
+                                <div class=" book-article" style="margin-top: 150px;text-align:justify;">
+                                    <p
+                                        style="font-size: 30px;margin-bottom: 20px;letter-spacing: 0.2em;font-weight: 600;">
+                                        “正义之锚”魔法
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">
+                                        <span class='zhongdian' style="    font-weight: 600;
+                                        ">类型</span>：控制魔法<br>
+                                        <span class='zhongdian' style="    font-weight: 600;
+                                        ">效果</span>：此魔法旨在<span class='zhongdian' style="    font-weight: 600;
+                                               ">控制和限制</span>利用数据实施的<span class='zhongdian'
+                                            style="    font-weight: 600;
+                                               ">垄断和不正当竞争</span>行为。它通过监测、识别和纠正涉及数据的不当市场行为，确保市场的公平竞争和消费者的合法权益。一旦监测到异常的数据使用行为，魔法会立即发出警报。
+
+                                        <!-- <div class="magicbook-code1 " style="position:absolute; z-index: 15;">轻触解码:</div> -->
+                                    <div
+                                        style="font-size: 15px;color: rgb(151, 116, 85);margin-top: 10px;margin-bottom: 10px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                                        轻触解码 ↓</div>
+                                    <div class="code-content v3" style="text-align:justify;">
+                                        <p style="display: inline;
+                                    background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+                                            <span class='zhongdian'
+                                                style="font-weight: 600;">《反垄断法》</span>修改后，明确规定经营者不得利用数据达成<span
+                                                class='zhongdian' style="font-weight: 600;">垄断</span>协议，不得利用数据滥用<span
+                                                class='zhongdian'
+                                                style="font-weight: 600;">市场支配地位</span>，也不得利用数据实施特定的经营者集中。算法共谋、大数据“杀熟’极端集中式并购等涉及数据的限制、排除竞争的行为，因此已经被明确列入《反垄断法》规制范围。
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class='control'>
+                                <label for='two'></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第三页右半部分 -->
+                    <div class='pages_page'>
+                        <img src="img/book-right.png" style="width: 100%;position: absolute;">
+                        <div class='pages_page__inner'>
+                            <div class='control next'>
+                                <label for='four'></label>
+                            </div>
+                            <div class='content'>
+                                <div class=" book-article" style="margin-top: 150px;text-align:justify;">
+                                    <p
+                                        style="font-size: 30px;margin-bottom: 20px;letter-spacing: 0.2em;font-weight: 600;">
+                                        “守护之盾”魔法
+                                    <p style="line-height: 25px;letter-spacing: 0.2em;">
+                                        <span class='zhongdian' style="font-weight: 600;">类型</span>：防御魔法<br>
+                                        <span class='zhongdian' style="font-weight: 600;">效果</span>：此魔法为数据构建一个强大的<span
+                                            class='zhongdian' style="font-weight: 600;">守护之盾</span>，根据数据的不同重要程度，提供不同级别的保护。当数据面临<span
+                                            class='zhongdian' style="font-weight: 600;">篡改、破坏、泄露或非法获取、非法利用</span>的威胁时，守护之盾会自动启动，阻止任何未经授权的行动，确保数据的完整性和安全。当面临高级或复杂的威胁时，守护之盾能够与<span
+                                            class='zhongdian' style="font-weight: 600;">疆域数据安全工作协调机制</span>进行联动，请求更多资源或支持，加强防御能力。
+
+                                        <!-- <div class="magicbook-code1 " style="position:absolute; z-index: 15;">轻触解码:</div> -->
+                                    <div
+                                        style="font-size: 15px;color: rgb(136, 105, 78);margin-top: 10px;margin-bottom: 10px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                                        轻触解码 ↓</div>
+                                    <div class="code-content v3" style="text-align:justify;">
+                                        <p style="display: inline;
+                                    background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+<span class='zhongdian' style="font-weight: 600;">《中华人民共和国数据安全法》</span>第三章第二十一条 提出：国家建立<span class='zhongdian' style="font-weight: 600;">数据分类分级保护制度</span>，根据数据在经济社会发展中的重要程度，以及一旦遭到篡改、破坏、泄露或者非法获取、非法利用，对国家安全、公共利益或者个人、组织合法权益造成的危害程度，对数据<span class='zhongdian' style="font-weight: 600;">实行分类分级保护</span>。<span class='zhongdian' style="font-weight: 600;">国家数据安全工作协调机制</span>统筹协调有关部门制定重要数据目录，加强对重要数据的保护。
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第四页左半部分 -->
+                    <div class='pages_page' style="overflow: hidden;">
+                        <img src="img/map_01.png" style="width: 100%;position: absolute;transform: rotateY(180deg);">
+                        <div class='pages_page__inner'>
+                            <!-- <div class='logo'>慢性病</div> -->
+                            <div class='pagenumber'>7 8</div>
+                            <div class='content'>
+
+                            </div>
+                            <div class='control'>
+                                <label for='three'></label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第四页右半部分 -->
+                    <div class='pages_page'>
+                        <img src="img/map_02.png" style="width: 100%;position: absolute;">
+                        <div class='pages_page__inner'>
+                            <div class='content'>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+    <section style="position: relative;">
+        <img src="img/todolist-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div class="wenzi1"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:0.2em;font-weight: bolder;top: 12vh;">
+            <p style="text-align: center; width: 100vw;z-index: 5;color: #ebe5da;">魔法书里掉落了一张纸条</p>
+        </div>
+        <img src="img/todolist.png" style="position: absolute;width: 100%;height: 100vh;" class="todolist">
+    </section>
+
+    <section style="position: relative;">
+        <img src="img/magicbg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div class="wenzi1"
+            style="position: absolute;font-family: 'ming'; font-size: 45px;letter-spacing:5px;font-weight: bolder;top: 12vh;">
+            <p style="text-align: center; width: 100vw;z-index: 5;color: #964A34;">"哦，对了。这是勇者当年留下的法杖。"</p>
+        </div>
+        <img class="fazhanghover" src="img/magic.png" style="width: 18vw;position: absolute;left: 15%;bottom: 15%;">
+        <!-- <div class="light4">
+            <img class="fazhanghover1" src="img/fragment1.0.png"
+                style="width: 12vw;position: absolute;left:20%;bottom: 20%;">
+            <span class="tooltiptext4">
+                安全碎片，象征着中国在全球互联网治理中的坚定承诺与努力。在构建网络空间命运共同体的过程中，中国始终致力于深化国际合作，共同维护网络空间的安全。无论是防范网络攻击、打击网络犯罪，还是保护个人信息，中国都积极参与到全球的互联网治理机制中，为创造一个安全、稳定的网络环境贡献力量。</span>
+            </span>
+        </div> -->
+
+        <div class="magic-container">
+            <input type="radio" name="tabs" id="tab_top" checked>
+            <input type="radio" name="tabs" id="tab_middle">
+            <input type="radio" name="tabs" id="tab_bottom">
+            <input type="radio" name="tabs" id="tab_4">
+            <div class="cube">
+                <div class="tab-content">
+                    <h1>简介</h1>
+                    <h2>INTRODUCTION</h2>
+                    <div class="jieshao" style="margin-top: 10px;">
+                        <p>法杖有（防御）创建安全防护罩，（攻击）监测周边病毒和（标记）溯源数据痕迹的作用；<span style="font-weight: 600;color: #964A34;" >法杖搭配魔法书能够召唤安全碎片，安全碎片能够建立安全屏障。</span>
+                        </p>
+                    </div>
+                    <div
+                        style="font-size: 15px;color: rgb(148, 99, 70);margin-top: 20px;margin-bottom: 15px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                        轻触解码 ↓</div>
+                    <div class="code-content0 v0" style="text-align:justify;">
+                        <p style="display: inline;
+                background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+                            只有<span style="font-weight: 600;" >政策和技术合力</span>才能够打下构建网络命运共同体的坚实基础。
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="tab-content">
+                    <h1>防御</h1>
+                    <h2>DEFENSE</h2>
+                    <div class="jieshao">
+                        <p>搭配安全碎片和魔法书咒语，法杖能搭建一道防护罩，保护居民安全。
+                        </p>
+                    </div>
+                    <div
+                        style="font-size: 15px;color: rgb(148, 99, 70);margin-top: 20px;margin-bottom: 15px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                        轻触解码 ↓</div>
+                    <div class="code-content0 v0" style="text-align:justify;">
+                        <p style="display: inline;
+                    background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+                            系统平台安全：基础设施、网络系统、数据采集、数据存储、数据处理等多层次安全防护技术。
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="tab-content">
+                    <h1>攻击</h1>
+                    <h2>ATTACK</h2>
+                    <div class="jieshao">
+                        <p>如果法杖周围出现潜藏病毒等风险危机，法杖将闪烁红光，并发射激光对普通病毒进行清除。
+                        </p>
+                    </div>
+                    <div
+                        style="font-size: 15px;color: rgb(148, 99, 70);margin-top: 20px;margin-bottom: 15px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                        轻触解码 ↓</div>
+                    <div class="code-content0 v0" style="text-align:justify;">
+                        <p style="display: inline;
+                    background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+                            平台安全运维：风险管理、系统评测等技术和管理类标准。
+
+
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="tab-content">
+                    <h1>标记</h1>
+                    <h2>MARK</h2>
+                    <div class="jieshao">
+                        <p style="margin-top: 10px;">
+                            法杖能够标记遇到的数据居民，记忆其气息并对其进行定位追踪；除了居民本身，居民所生产的有价值的成果也能够由法杖植入隐秘的安全印记，可用于身份认证。
+                        </p>
+                    </div>
+
+                    <div
+                        style="font-size: 15px;color: rgb(148, 99, 70);margin-top: 10px;margin-bottom: 15px;font-family: 'ming';letter-spacing: 5px;text-align: center;">
+                        轻触解码 ↓</div>
+                    <div class="code-content0 v0" style="text-align:justify;">
+                        <p style="display: inline;
+                    background-repeat: no-repeat;line-height: 25px;letter-spacing: 0.2em;">
+                            安全相关技术：分布式安全计算、安全存储、数据溯源、密钥服务、细粒度审计等安全防护技术。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="labels">
+                <label for="tab_top" class="tab">法杖简介</label>
+                <label for="tab_middle" class="tab">防御</label>
+                <label for="tab_bottom" class="tab">攻击</label>
+                <label for="tab_4" class="tab">标记</label>
+            </div>
+        </div>
+    </section>
+
+    <section style="position: relative;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/stars copy/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div class="light5">
+            <img src="img/fragment1.0.png" style="position: absolute;width: 20vw;top: 40%;left: 40vw;"
+                class="wenzi4 suipianhover">
+            <span class="tooltiptext5">
+                <!-- <img src="img/huawen.png"> -->
+                安全碎片，象征着中国在全球互联网治理中的坚定承诺与努力。在构建网络空间命运共同体的过程中，中国始终致力于深化国际合作，共同维护网络空间的安全。无论是防范网络攻击、打击网络犯罪，还是保护个人信息，中国都积极参与到全球的互联网治理机制中，为创造一个安全、稳定的网络环境贡献力量。</span>
+            </span>
+        </div>
+
+        <div class="fadein1" data-animate="fadein1"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:5px;font-weight: bolder;top: 20%;color: white;">
+            <p style="text-align: center; width: 100vw;z-index: 5;">你已经掌握了基本的魔法！</p>
+            <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 30px;z-index: 5;">恭喜你获得安全碎片！
+            </p>
+        </div>
+    </section>
+
+
+    <section style="position: relative;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/stars copy/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div class="fadein1" data-animate="fadein1"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:0.2em;font-weight: bolder;top: 40%;color:white;">
+            <p style="text-align: center; width: 100vw;z-index: 5;">现在，带着法杖和魔法书</p>
+            <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 30px;z-index: 5;">开始你的征途吧——
+            </p>
+        </div>
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/star/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div style="position: absolute;" class="wenzi1">
+            <h3 class="mu" id="part2" style="color: white;font-size: 150px;">第二幕</h3>
+            <h3 class="mu" id="part1" style="color: white;font-size: 60px;font-family: 'snow';letter-spacing: 0.3em;margin-top: 80px;">数合 ·积极对话，重启节点</h3>
+        </div>
+    </section>
+
+
+    <section style="position: relative;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/rain/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div class="fadein2" data-animate="fadein2"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:5px;font-weight: bolder;top: 45%;color:white">
+            <p style="text-align: center; width: 100vw;z-index: 5;">前方大雨封路，这里似乎成为了一座数据孤岛
+            </p>
+            <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 40px;z-index: 5;">试试用魔法的力量恢复路况
+            </p>
+            <!-- <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 40px;z-index: 5;">↓
+            </p> -->
+            <div class="scroll-container" style="width: 100vw; position: absolute;left: 49vw;margin-top: 30px;">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <!-- <span class="text">Scroll down</span> -->
+            </div>
+        </div>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/rain/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <iframe src="iframe/puzzle/index.html"
+            style="position: absolute; width: 100vw; height: 100vh;overflow: hidden;"></iframe>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="../img/king-bg.png" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/opening-popup-animation/open.html"
+            style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+
+
+    <section style="position: relative;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/stars copy/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div class="light5">
+            <img src="img/fragment2.0.png" style="position: absolute;width: 20vw;top: 40%;left: 40vw;"
+                class="wenzi4 suipianhover">
+            <span class="tooltiptext5">
+                <!-- <img src="img/huawen.png"> -->
+                合作碎片，是中国在全球数字经济合作中的生动写照。随着数字经济的快速发展，中国积极参与国际合作，深化与其他国家的数字经济交流与合作。从技术研发到市场拓展，从人才培养到政策对话，中国与世界各国共同探索数字经济发展的新路径，致力于打造互利共赢的全球数字经济生态圈。</span>
+            </span>
+        </div>
+
+        <div class="fadein1" data-animate="fadein1"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:5px;font-weight: bolder;top: 20%;color: white;">
+            <p style="text-align: center; width: 100vw;z-index: 5;">所有节点已重新启动！</p>
+            <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 30px;z-index: 5;">恭喜你获得合作碎片！
+            </p>
+        </div>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/star/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div style="position: absolute;" class="wenzi1">
+            <h3 class="mu" id="part3" style="color: white;font-size: 150px;">第三幕</h3>
+            <h3 class="mu" id="part1" style="color: white;font-size: 60px;font-family: 'snow';letter-spacing: 0.3em;margin-top: 80px;"> 数惠 · 消灭怪物，恢复数据</h3>
+        </div>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <div>
+            <canvas id="canvas-cloud" style="width: 100vw;height: 100vh;"></canvas>
+        </div>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/monster-introduction/index.html"
+            style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/stars/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <iframe src="iframe/snake/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/JavaScript-flappy-bird-master/index.html"
+            style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="img/Zhaoze.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div style="position: absolute;top: 15%;right: 9vw;text-shadow: 3px 3px 2px rgb(158, 85, 51);">
+            <h1
+                style="text-align: center;font-family: ming;color: rgb(255, 255, 255);font-size: 40px;letter-spacing: 0.2em;margin: 20px;">
+                请在数据药房中找到匹配的“药物”</h1>
+            <h1
+                style="text-align: center;font-family: ming;color: rgb(255, 255, 255);font-size: 40px;letter-spacing:0.2em;">
+                研制出化解毒液的配方</h1>
+        </div>
+        <iframe src="iframe/flip-card-game/index.html"
+            style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+
+
+
+    <section style="position: relative;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/stars copy/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div class="light5">
+            <img src="img/fragment-all.png" style="position: absolute;width: 20vw;top: 40%;left: 40vw;"
+                class="wenzi4 suipianhover">
+            <span class="tooltiptext5">
+                <!-- <img src="img/huawen.png"> -->
+                普惠碎片，是中国推动互联网普惠包容发展的象征。互联网的普及和发展，应当惠及每一个人。中国在推动互联网普惠包容发展的过程中，努力打破数字鸿沟，让更多人能够享受到互联网带来的便利。无论是农村地区、边远地区，还是弱势群体，中国都在努力为他们提供更好的互联网接入和服务，让互联网的发展成果惠及每一个人。</span>
+            </span>
+        </div>
+
+        <div class="fadein1" data-animate="fadein1"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:5px;font-weight: bolder;top: 20%;color: white;">
+            <p style="text-align: center; width: 100vw;z-index: 5;">所有怪物都被打败了！</p>
+            <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 30px;z-index: 5;">恭喜你获得普惠碎片！
+            </p>
+        </div>
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/star/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <div style="position: absolute;" class="wenzi1">
+            <h3 class="mu" id="part4" style="color: white;font-size: 150px;">尾声</h3>
+        </div>
+    </section>
+
+    <section style="position: relative;">
+        <iframe src="iframe/stars/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+        <img src="img/final.png" style="position: absolute;width: 100%;">
+        <div class="fadein1" data-animate="fadein1"
+            style="position: absolute;font-family: 'ming'; font-size: 50px;letter-spacing:5px;font-weight: bolder;top: 70%;color: white;">
+            <p style="text-align: center; width: 100vw;z-index: 5;">现在，你已经获得了修复疆域之心的全部材料
+            </p>
+            <p style="text-align: center; width: 100vw; font-size: 80px;margin-top: 30px;z-index: 5;">立即开始重建吧——
+            </p>
+        </div>
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <div class="scenes" tabindex="0" style="position: absolute;width: 100%;height: 100vh;">
+            <div class="scene-1" style="position: absolute;width: 100%;height: 100vh;">
+
+            </div>
+            <div class="scene-2" style="position: absolute;width: 100%;height: 100vh;">
+            </div>
+        </div>
+    </section>
+
+    <section class="top-parallax">
+        <!-- <iframe src="iframe/stars/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe> -->
+        <img src="img/colorful-reverse.png" style="position: absolute;width: 100%;height: 100vh;">
+        <div style="position: absolute;color: rgb(248, 178, 87);display: flex;flex-direction: column;justify-content:center;align-items: center;font-family: 'snow';"
+            class="fadein" data-animate="fadein">
+            <h3 style="font-size:30px; margin: 8px;">疆域世界重建完成，</h3>
+            <h3 style="font-size:30px; margin: 8px;">疆域之心恢复运转。</h3>
+            <h3 style="font-size:30px; margin: 8px;">谢谢你，勇士，让疆域世界重回美好。</h3>
+            <!-- <h3 style="font-size:30px; margin: 8px;">依靠各国节点维系运转的机械心脏，</h3>
+            <h3 style="font-size:30px; margin: 8px;">为疆域空间的存续提供必要的能量。</h3> -->
+            <h3 style="font-size:30px; margin: 15px;">. . . . . .</h3>
+        </div>
+
+    </section>
+
+
+    <section style="position: relative; display: flex;justify-content: center;align-items: center;">
+        <img src="#" style="position: absolute;width: 100%;height: 100vh;">
+        <iframe src="iframe/team/index.html" style="position: absolute; width: 100vw; height: 100vh;"></iframe>
+    </section>
+
+
+
+
+
+
+
+
+    <script src="css&js/parallax.js"></script>
+</body>
+
+<script>
+    (function () {
+
+        var c = document.getElementById("c"),
+            ctx = c.getContext("2d");
+
+        c.width = innerWidth;
+        c.height = innerHeight;
+
+        var lines = [],
+            maxSpeed = 5,
+            spacing = 50,
+            xSpacing = 0,
+            n = innerWidth / spacing,
+            colors = ["#3B8686", "#79BD9A", "#A8DBA8", "#0B486B"],
+            i;
+
+        for (i = 0; i < n; i++) {
+            xSpacing += spacing;
+            lines.push({
+                x: xSpacing,
+                y: Math.round(Math.random() * c.height),
+                width: 2,
+                height: Math.round(Math.random() * (innerHeight / 10)),
+                speed: Math.random() * maxSpeed + 2,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            });
+        }
+
+
+        function draw() {
+            var i;
+            ctx.clearRect(0, 0, c.width, c.height);
+
+            for (i = 0; i < n; i++) {
+                ctx.fillStyle = lines[i].color;
+                ctx.fillRect(lines[i].x, lines[i].y, lines[i].width, lines[i].height);
+                lines[i].y += lines[i].speed;
+
+                if (lines[i].y > c.height)
+                    lines[i].y = 0 - lines[i].height;
+            }
+
+            requestAnimationFrame(draw);
+
+        }
+
+        draw();
+
+    }());
+</script>
+<script>
+    // var fooReveal = {
+    //     delay: 800,
+    //     duration:1500,
+    //     origin:"bottom",
+    //     distance: '50px',
+    //     easing: 'ease-in-out',
+    //     // rotate   : { z: 10 },
+    //     // scale    : 1.1,
+    //     reset: true
+    // };
+
+
+    // window.sr = ScrollReveal()
+    //     .reveal('.wenzi1', fooReveal);
+
+    //在这里了设置默认的动画
+    const sr = ScrollReveal({
+        duration: 1200,
+        easing: 'ease-in-out',
+        delay: 800,
+        reset: true,//动画是否在浏览到的时候重复发生
+    });
+    sr.reveal('.wenzi1', {
+        origin: "bottom",
+        distance: '50px',
+        duration: 800,
+        delay: 500,
+    });
+    sr.reveal('.wenzi2', {
+        duration: 1000,
+        delay: 200,
+        origin: "left",
+        distance: '200px',
+    });
+    sr.reveal('.wenzi3', {
+        duration: 1000,
+        origin: "right",
+        distance: '200px',
+    }, 500);
+    sr.reveal('.wenzi4', {
+        delay: 500,
+        duration: 800,
+        origin: "center",
+        // origin: "right",
+        // distance: '200px',
+    }, 500);
+    sr.reveal('.wenzi5', {
+        delay: 500,
+
+        origin: "top",
+        distance: '200px',
+    }, 500);
+    sr.reveal('.wenzi6', {
+        duration: 2000,
+        delay: 2500,
+        origin: "left",
+        distance: '200px',
+    });
+    sr.reveal('.wenzi7', {
+        duration: 2000,
+        delay: 3500,
+        origin: "right",
+        distance: '200px',
+    }, 500);
+    sr.reveal('.wenzi8', {
+        duration: 2000,
+        delay: 200,
+        origin: "left",
+        distance: '200px',
+    });
+    sr.reveal('.wenzi9', {
+        duration: 2000,
+        delay: 1500,
+        origin: "right",
+        distance: '200px',
+    }, 500);
+    sr.reveal('.wenzi10', {
+        duration: 1200,
+        delay: 800,
+        origin: "left",
+        distance: '800px',
+    });
+    sr.reveal('.wenzi11', {
+        duration: 2000,
+        delay: 1400,
+        origin: "right",
+        distance: '200px',
+    });
+</script>
+
+</html>
+<script src="css&js/draggin.min.js"></script>
+<script type="text/javascript" src="css&js/dragScript.js"></script>
+<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    /*
+    说明：这是一个滚动到可视区域播放动画的插件，当窗口滚动到可视区域时添加ClassName进入动画；
+    1.查找页面内所含有[data-animate]的元素，遍历得到他们本身；[data-animate]值为动态获取，需手写animation，
+    更多动画效果请访问https://daneden.github.io/animate.css/；
+    2.调用函数:计算元素是否到达可视区域 返回Boolean值；
+    3.添加有动画的ClassName；
+    注意：此方法不能用于ifarme,窗口滚动影响判断
+     */
+
+    $(function () {
+        var windowHeight = $(window).height();  //窗口高度
+
+        // 监听页面滚动
+        $(window).scroll(function (event) {
+            // 添加【data-animatie】
+            var dataAnimateEl = $('[data-animate]');
+            if (dataAnimateEl.length > 0) {
+                dataAnimateEl.each(function () {
+                    var element = $(this);
+                    var is_Animat = is_Visible_Area(element); //调用函数计算是否到达可视区域 返回Boolean
+                    var annimationVal = element.data("animate");
+                    if (is_Animat) {
+                        element.addClass(annimationVal);
+                    } else {
+                        element.removeClass(annimationVal); // 元素离开可视区域时移除动画类名
+                    }
+                })
+            }
+        });
+
+        //函数作用：计算元素是否到达可视区域
+        function is_Visible_Area(element) {
+            var objHeight = $(element).offset().top;//元素到顶部的高度
+            let winPos = $(window).scrollTop();//距离顶部滚动
+            let val = objHeight - winPos;
+            if (val < windowHeight && val > 0) {
+                //可视区域
+                // console.log("有动画")
+                return true;
+            } else {
+                //不可视区域
+                // console.log("不在可视区域内")
+                return false;
+            }
+        }
+    });
+
+</script>
+<script type="text/javascript">
+    (function () {
+        //云雾散开
+        let cloudOpen = new CloudOpen();
+        let canvasCloud = document.getElementById("canvas-cloud");
+        let animationPlayed = false;
+
+        cloudOpen.init(
+            () => {
+                //图片资源加载完成
+                function playAnimation() {
+                    cloudOpen.draw(() => {
+                        // cloudOpen.reset();
+                    });
+                }
+
+                // 创建 Intersection Observer 实例
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        const [entry] = entries;
+                        if (entry.isIntersecting && !animationPlayed) {
+                            // 当 Canvas 进入视窗且动画未播放时，播放动画
+                            animationPlayed = true;
+                            playAnimation();
+                        }
+                    },
+                    {
+                        threshold: 0.5, // 监听元素进入视窗的阈值，为 0.5 表示元素中心点进入视窗即触发回调函数
+                    }
+                );
+
+                // 观察 Canvas 元素
+                observer.observe(canvasCloud);
+            },
+            canvasCloud,
+            "img/nobody.png",
+            "img/yunwu.png",
+            10
+        );
+    })();
+</script>

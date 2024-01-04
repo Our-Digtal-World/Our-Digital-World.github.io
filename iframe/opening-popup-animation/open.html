@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .popup img {
+            width: auto;
+            height: 100vh;
+            text-align: center;
+            /* 将弹窗内的内容居中 */
+        }
+
+        #弹窗1Image {
+            display: block;
+            margin: 0 auto;
+            /* 水平居中 */
+            height: 100vh;
+
+            height: auto;
+            /* 保持图片的原始比例 */
+        }
+
+        #弹窗2Image {
+            display: block;
+            margin: 0 auto;
+            /* 水平居中 */
+            width: 500px;
+            /* 设置图片的宽度为500像素 */
+            height: auto;
+            /* 保持图片的原始比例 */
+        }
+
+        #弹窗3Image {
+            display: block;
+            margin: 0 auto;
+            /* 水平居中 */
+            width: 500px;
+            /* 设置图片的宽度为500像素 */
+            height: auto;
+            /* 保持图片的原始比例 */
+        }
+    </style>
+</head>
+
+<body>
+    <div style="margin-top: 8vh;">
+        <h1 style="text-align: center;color:rgb(219,179,93);font-size: 50px;letter-spacing: 5px;">
+            继续前进吧！你想先去拜访哪个国家呢？
+        </h1>
+    </div>
+    <div>
+        <div class="main"
+            style="position: absolute;z-index: 0; display: flex;align-content: center;align-items: center;">
+            <img src="kingcard.png" alt="Image 1" style="width: 20vw;margin-bottom: 80px;">
+            <img src="kingcard.png" alt="Image 1" style="width: 20vw;margin-top: 50px;">
+            <img src="kingcard.png" alt="Image 1" style="width: 20vw;margin-bottom: 80px;">
+        </div>
+        <nav class="main">
+            <div style="display: flex;flex-direction: column ;align-content: center;align-items: center;">
+                <a href="#弹窗1" onclick="checkPopupStatus('弹窗1')">
+                    <img class="king" src="king1.png" alt="Image 1" style="width: 20vw;margin-bottom: 80px;"> <br>
+                    <!-- <button>
+            点击对话
+            </button> -->
+                </a>
+            </div>
+
+
+            <div style="display: flex;flex-direction: column ;align-content: center;align-items: center;">
+                <a href="#弹窗2" onclick="checkPopupStatus('弹窗2')">
+                    <img class="king" src="king2.png" alt="Image 1" style="width: 20vw;margin-top: 50px;"> <br>
+                    <!-- <button>
+                点击对话
+            </button> -->
+                </a>
+            </div>
+
+
+            <div style="display: flex;flex-direction: column ;align-content: center;align-items: center;">
+                <a href="#弹窗3" onclick="checkPopupStatus('弹窗3')">
+                    <img class="king" src="king3.png" alt="Image 1" style="width: 20vw;margin-bottom: 80px;"> <br>
+                    <!-- <button>
+                点击对话
+            </button> -->
+                </a>
+            </div>
+        </nav>
+    </div>
+
+
+    <div
+        style="display: flex;align-items: center;justify-content: space-around;position: absolute;bottom: 8vh;width: 100vw;">
+        <div class="wrapper">
+            <a class="cta" href="#弹窗1" onclick="checkPopupStatus('弹窗1')"  style="margin-bottom: 80px;">
+                <span>点击对话</span>
+            </a>
+        </div>
+        <div class="wrapper">
+            <a class="cta" href="#弹窗2" onclick="checkPopupStatus('弹窗2')" style="margin-top: 50px;">
+                <span>点击对话</span>
+            </a>
+        </div>
+        <div class="wrapper">
+            <a class="cta" href="#弹窗3" onclick="checkPopupStatus('弹窗3')" style="margin-bottom: 80px;">
+                <span>点击对话</span>
+            </a>
+        </div>
+    </div>
+
+    <section id="弹窗1" class="popup">
+        <img id="弹窗1Image" src="1-1.png" alt="弹窗1 Image" onclick="changePopupImage('弹窗1')"  style="width: 100vw;height: 100vh;">
+    </section>
+
+    <section id="弹窗2" class="popup">
+        <img id="弹窗2Image" src="2-1.png" alt="弹窗2 Image" onclick="changePopupImage('弹窗2')"  style="width: 100vw;height: 100vh;">
+    </section>
+    <section id="弹窗3" class="popup">
+        <img id="弹窗3Image" src="3-1.png" alt="弹窗3 Image" onclick="changePopupImage('弹窗3')" style="width: 100vw;height: 100vh;">
+    </section>
+
+    <script>
+        var images = {
+            '弹窗1': ['1-1.png', '1-2.png', '1-3.png','1-4.png','1-5.png', '1-7.png', '1-8.png','1-9.png','1-10.png','1-11.png', '1-12.png','1-13.png'],
+            '弹窗2': ['2-1.png', '2-2.png', '2-3.png','2-4.png','2-5.png','2-6.png', '2-7.png', '2-8.png','2-9.png','2-10.png','2-11.png', '2-12.png','2-13.png','2-14.png', '2-15.png', '2-16.png','2-17.png','2-18.png','2-19.png','2-20.png'],
+            '弹窗3': ['3-1.png', '3-2.png', '3-3.png','3-4.png','3-5.png','3-6.png', '3-7.png', '3-8.png','3-9.png','3-10.png','3-11.png', '3-12.png','3-13.png'],
+        };
+        var currentImageIndex = {
+            '弹窗1': 0,
+            '弹窗2': 0,
+            '弹窗3': 0
+        };
+
+        function checkPopupStatus(sectionId) {
+            var popup = document.getElementById(sectionId);
+            if (popup.style.display === 'none') {
+                popup.style.display = 'block';
+                currentImageIndex[sectionId] = 0; // Reset the image index when the popup is displayed  
+            }
+        }
+
+        function changePopupImage(sectionId) {
+            currentImageIndex[sectionId]++;
+            if (currentImageIndex[sectionId] >= images[sectionId].length) {
+                currentImageIndex[sectionId] = 0;
+                closePopup(sectionId);
+            }
+            var popupImage = document.getElementById(sectionId + 'Image');
+            popupImage.src = images[sectionId][currentImageIndex[sectionId]];
+        }
+
+        function closePopup(sectionId) {
+            var popup = document.getElementById(sectionId);
+            popup.style.display = 'none';
+        }
+
+    </script>
+
+</body>
+
+</html>

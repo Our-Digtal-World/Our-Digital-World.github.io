@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Pip-Boy Screen in CSS</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira+Mono'>
+  <link rel="stylesheet" href="./scan.css">
+  <link rel="stylesheet" href="../../css&js/index.css">
+  <style>
+    .printword1 {
+
+      width: 12.1em;
+      /* 加上两个动画，一个是打字动画，使用steps让字一个一个的出现，注意step和字数保持一致，光标动画也是同理，*/
+      animation: typingWords 2s steps(12) 1, cursor 0.5s steps(1) 1;
+
+      /* 要设置不允许换行，且溢出隐藏 */
+      white-space: nowrap;
+      overflow: hidden;
+      /* 使用右边框作为打印的指针光标 */
+      border-right: 1px solid #000;
+      text-align: center;
+      margin: 10px;
+    }
+
+    @keyframes typingWords {
+      0% {
+        width: 0;
+      }
+    }
+
+    @keyframes cursor {
+      50% {
+        border-color: transparent;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="screen">
+    <div class="wenzi1"
+      style="position: absolute;font-family: 'snow'; font-size: 60px;letter-spacing:5px;font-weight: bolder;left: 160px;top: 8vh;">
+      “我是谁？”
+    </div>
+    <div class="wenzi1"
+      style="position: absolute;font-family: 'snow'; font-size: 60px;letter-spacing:5px;font-weight: bolder;right: 160px;top:16vh;">
+      “这是哪里？”
+    </div>
+
+  
+  <div style="position: absolute;font-family: 'snow'; display: flex;flex-direction: column;justify-content:center;align-items: center;top: 30vh;left: 0;" >
+    <h3 class="printword1" style="font-size:60px; letter-spacing:0.1em; ">这里似乎遭受了一场劫难</h3>
+    <h3 style="text-align: center; width: 100vw; font-size: 20px;" class="shuru">移动鼠标至发光处查看详情</h3>
+</div>
+  <!-- partial -->
+
+</body>
+
+</html>

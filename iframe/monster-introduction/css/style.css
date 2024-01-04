@@ -1,0 +1,253 @@
+:root {
+  --red: rgb(202, 56, 56);
+  --yellow: #6391ac;
+  --skyblue: rgb(230, 146, 146);
+  --green: green;
+}
+@font-face {
+  font-family: "ming";
+  font-display: auto;
+  src: url("../../../font/Mingchao.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'ming';
+  background-color: #000;
+}
+
+.bg-slide {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.bg-slide .bg-animal {
+  opacity: 0;
+  position: relative;
+}
+.bg-slide .show {
+  opacity: 1;
+}
+.bg-slide .bg-animal,
+.bg-slide .bg-animal::before {
+  width: 100%;
+  height: 100%;
+}
+.bg-slide .bg-animal:not(:nth-child(1)) {
+  display: none;
+}
+.bg-slide .bg-animal::before {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-size: cover;
+}
+.bg-slide .bg-animal:nth-child(1)::before {
+  background-image: url("../monster1-cardbg.png");
+}
+.bg-slide .bg-animal:nth-child(2)::before {
+  background-image: url("../monster2-cardbg.png");
+}
+.bg-slide .bg-animal:nth-child(3)::before {
+  background-image: url("../monster3-cardbg.png");
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.content-slide {
+  background-color: rgba(255, 255, 255, 0.65);
+  min-height: 60vh;
+  position: relative;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75vw;
+}
+
+.controller-arrows {
+  position: absolute;
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 10px;
+  left: 15px;
+  z-index: 30;
+}
+
+.bg-slide-item {
+  --size: 700px;
+  position: absolute;
+  max-width: var(--size);
+  left: calc(100% - var(--size));
+  bottom: 0;
+  opacity: 0.9;
+}
+
+.slide__item {
+  position: relative;
+  z-index: 20;
+  display: flex;
+}
+
+.slide__item:not(:nth-child(2)) {
+  display: none;
+}
+
+.title__slide {
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.title__slide .animal-name___slide {
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+.title__slide .animal-name___slide .line {
+  position: absolute;
+  width: 100%;
+  top: 95%;
+  transform: translatex(-75%);
+  height: 5px;
+}
+.animal-name___slide{
+  letter-spacing: 0.2em;
+  
+}
+
+.wolf-line {
+  background-color: var(--red);
+}
+
+.tiger-line {
+  background-color: var(--yellow);
+}
+
+.bear-line {
+  background-color: var(--skyblue);
+}
+
+.eagle-line {
+  background-color: var(--green);
+}
+
+.img__slide {
+  min-width: 28vw;
+  transform: translatey(-10px);
+  opacity: 0;
+}
+.img__slide img {
+  position: relative;
+  transform: translatey(-30%);
+}
+
+.title__slide,
+.description__slide {
+  transform: translatey(20px);
+  opacity: 0;
+}
+
+.description__slide {
+  display: flex;
+  align-items: flex-end;
+  font-size: 20px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  line-height: 1.5em;
+  letter-spacing: 0.2em;
+}
+
+.slide__item p::first-letter {
+  font-size: 1.7rem;
+  padding-right: 2px;
+  font-weight: bold;
+}
+
+.slide__item:nth-child(2) p::first-letter {
+  color: var(--red);
+}
+
+.slide__item:nth-child(3) p::first-letter {
+  color: var(--yellow);
+}
+
+.slide__item:nth-child(4) p::first-letter {
+  color: var(--skyblue);
+}
+
+.slide__item:nth-child(5) p::first-letter {
+  color: var(--green);
+}
+
+.left-arrow,
+.right-arrow {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.animated > *,
+.animated {
+  transition: all 0.5s ease-out;
+}
+.animated > * .title__slide,
+.animated .title__slide {
+  transition-delay: 0.3s;
+}
+
+.show .img__slide, .show .title__slide, .show .description__slide {
+  transform: translatey(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 700px) {
+  .slide__item {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img__slide {
+    max-width: 28vw;
+  }
+  .img__slide img {
+    transform: translatey(0);
+  }
+
+  .controller-arrows {
+    left: calc(50% - 100px / 2);
+  }
+
+  .content-slide {
+    min-height: 100%;
+  }
+}
+.monster{
+  width: 30vw;
+}

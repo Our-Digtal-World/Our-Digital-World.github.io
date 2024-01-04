@@ -1,0 +1,231 @@
+
+@font-face {
+    font-family: "snow";
+    font-display: auto;
+    src: url("../../font/Snow.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('../../img/king-bg.png'); 
+    background-position: 0 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: 'snow';
+    letter-spacing: 0.25em;
+}
+/* main page layout */
+
+.main {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top:3vh;
+}
+
+.open-popup {
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: pixel;
+    width: 10em;
+    height: 4em;
+    border: 1px solid;
+    text-align: center;
+    line-height: 4em;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 1em;
+}
+
+.open-popup:hover {
+    border-width: 2px;
+}
+
+/* popup page layout */
+
+.popup {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: inherit;
+    flex-direction: column;
+    justify-content: flex-start;
+    display: none;
+}
+
+.popup:target {
+    display: flex;
+}
+
+.popup .back {
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    height: 2em;
+    line-height: 2em;
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+.popup .back:visited {
+    color: black;
+}
+
+.popup .back:hover {
+    background-color: #eee;
+}
+
+.popup p {
+    font-size: 100px;
+    text-align: center;
+    margin: 0.1em 0.05em;
+}
+
+/* animation effects */
+
+.popup > * {
+    filter: opacity(0);
+    animation: fade-in 0.5s ease-in forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fade-in {
+    to {
+        filter: opacity(1);
+    }
+}
+
+.popup::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    background-color: white;
+    animation: open-animate 0.5s cubic-bezier(0.8, 0.2, 0, 1.2) forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes open-animate {
+    to {
+        height: 100vh;
+        top: 0;
+    }
+}
+
+.popup::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    top: calc((100% - 2px) / 2);
+    left: 0;
+    animation: line-animate 0.5s cubic-bezier(0.8, 0.2, 0, 1.2);
+}
+
+@keyframes line-animate {
+    50%, 100% {
+        width: 100%;
+    }
+}
+/* button{
+    font-family: pixel;
+    width: 10em;
+    height: 4em;
+    font-size: 18px;
+    background-color: transparent;
+    text-decoration: none;
+    border-style: dashed;
+    border-width:2px ;
+    margin: 5px auto;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+button:hover {
+    border-width: 3px;
+}
+a{
+    text-decoration: none;
+} */
+
+
+
+
+.wrapper {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 8vw;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      width: 8vw;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      background: #b8603e;
+      transition: 1s;
+      box-shadow: 6px 6px 0 rgb(109, 112, 156);
+      -webkit-transform: skewX(-15deg);
+              transform: skewX(-15deg);
+  }
+  
+  .cta:focus {
+     outline: none; 
+  }
+  
+  .cta:hover {
+      transition: 0.5s;
+      box-shadow: 10px 10px 0 #FBC638;
+  }
+  
+  .cta span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 0px;
+  }
+  
+  .cta:hover  span:nth-child(2) {
+      transition: 0.5s;
+      /* margin-right: 45px; */
+  }
+  
+    span {
+      -webkit-transform: skewX(15deg);
+              transform: skewX(15deg) 
+    }
+  
+
+  
+  @-webkit-keyframes color_anim {
+      0% {
+          fill: white;
+      }
+      50% {
+          fill: #FBC638;
+      }
+      100% {
+          fill: white;
+      }
+  }
+.king:hover{
+    transform: translateY(-20px);
+    transition: transform 0.5s ease-in;
+}
+.king{
+    z-index: 2;
+}

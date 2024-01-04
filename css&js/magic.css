@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.magic-container{
+    height: 40vh;
+    position: relative;
+    width: 50vw;
+    display: flex;
+    color:#F7EEE2;
+    font-weight: 300;
+    transform: translate(38vw,35vh);
+    text-transform: uppercase;
+    perspective: 1300px;
+    /* margin: 50px; */
+}
+input{
+    display: none;
+}
+.labels{
+    height: 40vh;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tab{
+    width: 10vw;
+    height: 8vh;
+    line-height: 80px;
+    text-align: left;
+    padding-left: 2vw;
+    letter-spacing: 0.2em;
+    font-size: 20px;
+}
+.tab:nth-child(1){
+    background-color:#DDCDBE;
+    background-image: url("../img/fazhang1.png");
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color:#8d5433;
+}
+.tab:nth-child(2){
+    background-color: #B8A890;
+    background-image: url("../img/fazhang2.png");
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color:#744022;
+}
+.tab:nth-child(3){
+    background-color:#B17551;
+    background-image: url("../img/fazhang3.png");
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: white;
+}
+.tab:nth-child(4){
+    background-color:#835131;
+    background-image: url("../img/fazhang4.png");
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    color: white;
+}
+.cube{
+    position: relative;
+    flex: 1;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in;
+}
+.tab-content{
+    width: 95%;
+    height:40vh;
+    position: absolute;
+}
+.jieshao{
+    width: 80%;
+    margin: 5px auto;
+}
+.code-content0{
+    width: 80%;
+    margin: 5px auto;
+}
+.jieshao b{
+    color:#7b4038;
+}
+.tab-content h1{
+    color: #C24328;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+    margin: 15px;
+}
+.tab-content h2{
+    color: #964A34;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+.tab-content h3{
+    color: #964A34;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+.jieshao p{
+    font-size: 16px;
+    font-weight: 100;
+    /* text-indent: 2em; */
+    color: #0B2540;
+    line-height: 1.5em;
+    margin-top: 30px;
+}
+.tab-content:nth-child(1){
+    background-image: url("../img/fazhang-bg0.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotateX(-270deg) translateY(-20vh);
+    transform-origin: top center;
+}
+.tab-content:nth-child(2){
+    background-image: url("../img/fazhang-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: translateZ(20vh);
+}
+.tab-content:nth-child(3){
+    background-image: url("../img/fazhang-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotateX(-90deg) translateY(20vh);
+    transform-origin: bottom center;
+}
+.tab-content:nth-child(4){
+    background-image: url("../img/fazhang-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotateZ(180deg) rotateY(180deg) translateZ(20vh);
+
+}
+#tab_top:checked ~ .cube{
+    transform: rotateX(-90deg);
+}
+#tab_middle:checked ~ .cube{
+    transform: rotateX(0deg) 
+    translateY(3px)
+    ;
+}
+#tab_bottom:checked ~ .cube{
+    transform: rotateX(90deg);
+}
+#tab_4:checked ~ .cube{
+    transform: rotateX(180deg) 
+    translateY(-3px)
+    ;
+}
+.fazhanghover:hover{
+    transform: translateY(-50px) translateX(-25px);
+    transition: transform  ease-in-out .5s;
+}
+.fazhanghover1:hover{
+    transform: translateY(-50px) translateX(25px);
+    transition: transform  ease-in-out .5s;
+}
+
+.light4 .tooltiptext4 {
+    font-family: 'circle';
+    visibility: hidden;
+    width: 30vw;
+    background-color:rgba(230, 177, 170, 0.4);
+    color: #702d2d;
+    /* text-align: center; */
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 5;
+    bottom: 5vh;
+    left:20%;
+    line-height: 30px;
+    text-indent: 2em;
+}
+.light4:hover .tooltiptext4{
+    visibility: visible;
+}
+.light5 .tooltiptext5 {
+    font-family: 'circle';
+    visibility: hidden;
+    width: 50vw;
+    background-color:rgba(255, 209, 203, 0.4);
+    color: #702d2d;
+    /* text-align: center; */
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 5;
+    bottom: 10vh;
+    left:25vw;
+    line-height: 30px;
+    text-indent: 2em;
+}
+.light5:hover .tooltiptext5{
+    visibility: visible;
+}
+.suipianhover{
+    animation: float-vertical 3s infinite linear;
+    
+}
+@keyframes float-vertical {
+    0% {
+      transform: translate3d(0, 0%, 0);
+    }
+    25% {
+      transform: translate3d(0, 2%, 0);
+    }
+    75% {
+      transform: translate3d(0, -2%, 0);
+    }
+    100% {
+      transform: translate3d(0, 0%, 0);
+    }
+  }
+  
+

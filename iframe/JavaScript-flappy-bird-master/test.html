@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flappy-bird</title>
+	<link rel="stylesheet" href="CSS/reset.css">
+	<link rel="stylesheet" href="CSS/index.css">
+	<link rel="icon" href="bird.ico">
+	<style>
+		
+@font-face {
+    font-family: "ming";
+    font-display: auto;
+    src: url("../../font/Mingchao.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	background-image: url(images/desert.jpg);
+	background-size: 100% 100%;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	height: 100vh;
+	overflow: hidden;
+}
+a {
+            font-family: ming;
+            width: 15em;
+            height: 4em;
+			text-align: center;
+            font-size: 18px;
+            background-color: transparent;
+            text-decoration: none;
+            /* border-style: dashed;
+            border-width: 2px; */
+			border: 0;
+			color: white;
+            font-weight: bold;
+            letter-spacing: 5px;
+			position: absolute;
+			margin: 5px auto;
+			left: 0; top: 0; right: 0; bottom: 0;
+        }
+
+        a:hover {
+            /* border-width: 3px; */
+			/* font-size: 23px; */
+			color:rgb(209,113,86);
+			font-size: 20px;
+        }
+		a{
+			text-decoration: none;
+			display: block;
+			margin:5px auto;
+		}
+	</style>
+</head>
+
+<body>
+    
+	<div style="margin-top: 5%;">
+		<h1 style="text-align: center;font-family: ming;color: white;font-size: 50px;letter-spacing: 5px;text-shadow: 3px 3px 2px rgb(66, 66, 97);">点击鼠标尽可能多地穿过壁垒巨人设置的障碍吧</h1>
+	  <!-- 退出无尽模式按钮 -->
+</div>
+	<div id="game" style="margin: 100px auto;">
+		<!-- 小鸟div -->
+		<div class="bird"></div>
+
+		<!-- 开始游戏按钮 -->
+		<div class="start start-white" style="font-family: ming;letter-spacing: 5px;">开始游戏</div>
+
+		<!-- 最上层分数 -->
+		<div class="score">0</div>
+
+		<!-- mask 蒙层 -->
+		<div class="mask"></div>
+
+		<!-- 游戏结束box -->
+		<div class="end" style="font-family: ming;letter-spacing: 5px;font-size: 20px;">
+			<div class="over">你失败了,<br>重新开始吧！</div>
+			<div class="results">Your Results</div>
+			<div class="final-score">0</div>
+			<ul class="rank-list">
+			</ul>
+			<div class="restart">重新开始</div>
+		</div>
+	</div>
+
+	
+	<a href="index.html" class="endlessButton" >退出无尽模式</a>
+	
+	<script src="JS/utils.js"></script>
+	<script src="JS/test.js"></script>
+
+</body>
+
+</html>

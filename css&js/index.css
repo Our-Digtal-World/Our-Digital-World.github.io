@@ -1,0 +1,808 @@
+@font-face {
+    font-family: "pixel";
+    font-display: auto;
+    src: url("../font/IPix.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "snow";
+    font-display: auto;
+    src: url("../font/Snow.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "monster";
+    font-display: auto;
+    src: url("../font/monster.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "ming";
+    font-display: auto;
+    src: url("../font/Mingchao.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: "alimama";
+    font-display: auto;
+    src: url("../font/alimama.ttf");
+    font-weight: normal;
+    font-style: normal;
+} */
+@font-face {
+    font-family: "modao";
+    font-display: auto;
+    src: url("../font/modao.ttf");
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: "circle";
+    font-display: auto;
+    src: url("../font/ChillRoundF.ttf");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.wenzi4 {
+    font-family: "snow";
+}
+
+.dialog {
+    font-family: "pixel";
+    position: absolute;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.dialog1 {
+    font-family: "pixel";
+    position: absolute;
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-top: 200px;
+}
+
+.attack {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.txt {
+    position: relative;
+    font-size: 65px;
+    font-weight: 600;
+    margin: 80px;
+    color: white;
+    width: 100%;
+    font-family: pixel;
+
+}
+
+.guzhang {
+    position: absolute;
+    width: 100%;
+    top: 300px;
+}
+
+.txt::before {
+    /* 获取文本 */
+    content: attr(data-text);
+    position: absolute;
+    /* 向左侧移2px */
+    left: -3px;
+    width: 100%;
+    /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
+    background: #050c18;
+    /* 给before伪元素的文本添加左侧2px大小的红色文字阴影 */
+    text-shadow: 3px 0 rgb(202, 42, 37);
+    /* 应用蒙版垂直变化动画，并一直循环 */
+    animation: animation-before 3s infinite linear alternate-reverse;
+}
+
+.txt::after {
+    /* 获取文本 */
+    content: attr(data-text);
+    position: absolute;
+    /* 向左侧移2px */
+    left: 3px;
+    width: 100%;
+    /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
+    background: #050c18;
+    /* 给before伪元素的文本添加右侧2px大小的蓝色文字阴影 */
+    text-shadow: -3px 0 rgb(62, 107, 206);
+    /* 应用蒙版垂直变化动画，并一直循环 */
+    animation: animation-after 3s infinite linear alternate-reverse;
+}
+
+.txt1 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    width: 100%;
+    padding: 0 4px;
+    color: white;
+    font-family: pixel;
+    text-align: center;
+}
+
+.txt1::before {
+    /* 获取文本 */
+    content: attr(data-text);
+    position: absolute;
+    /* 向左侧移2px */
+    left: -2px;
+    width: 100%;
+    /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
+    background: #050c18;
+    /* 给before伪元素的文本添加左侧2px大小的红色文字阴影 */
+    text-shadow: 2px 0 rgb(202, 42, 37);
+    /* 应用蒙版垂直变化动画，并一直循环 */
+    animation: animation-before 3s infinite linear alternate-reverse;
+}
+
+.txt1::after {
+    /* 获取文本 */
+    content: attr(data-text);
+    position: absolute;
+    /* 向左侧移2px */
+    left: 2px;
+    width: 100%;
+    /* 将背景色设为与主背景同样的颜色，用于遮挡我们的标签元素 */
+    background: #050c18;
+    /* 给before伪元素的文本添加右侧2px大小的蓝色文字阴影 */
+    text-shadow: -2px 0 rgb(62, 107, 206);
+    /* 应用蒙版垂直变化动画，并一直循环 */
+    animation: animation-after 3s infinite linear alternate-reverse;
+}
+
+@keyframes animation-before {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    5% {
+        clip-path: inset(.8em 0 .4em 0);
+    }
+
+    10% {
+        clip-path: inset(.4em 0 .8em 0);
+    }
+
+    15% {
+        clip-path: inset(.1em 0 1em 0);
+    }
+
+    20% {
+        clip-path: inset(.3em 0 .6em 0);
+    }
+
+    25% {
+        clip-path: inset(.6em 0 .3em 0);
+    }
+
+    30% {
+        clip-path: inset(.8em 0 .5em 0);
+    }
+
+    35% {
+        clip-path: inset(1em 0 .1em 0);
+    }
+
+    40% {
+        clip-path: inset(.7em 0 .35em 0);
+    }
+
+    45% {
+        clip-path: inset(.5em 0 .2em 0);
+    }
+
+    50% {
+        clip-path: inset(.2em 0 .5em 0);
+    }
+
+    55% {
+        clip-path: inset(.35em 0 .7em 0);
+    }
+
+    60% {
+        clip-path: inset(.1em 0 .9em 0);
+    }
+
+    65% {
+        clip-path: inset(.8em 0 .46em 0);
+    }
+
+    70% {
+        clip-path: inset(.66em 0 .33em 0);
+    }
+
+    75% {
+        clip-path: inset(.48em 0 .23em 0);
+    }
+
+    80% {
+        clip-path: inset(.23em 0 .48em 0);
+    }
+
+    85% {
+        clip-path: inset(.39em 0 .79em 0);
+    }
+
+    90% {
+        clip-path: inset(.33em 0 .66em 0);
+    }
+
+    95% {
+        clip-path: inset(1em 0 .3em 0);
+    }
+
+    100% {
+        clip-path: inset(.62em 0 .29em 0);
+    }
+}
+
+@keyframes animation-after {
+    0% {
+        clip-path: inset(0 0 0 0);
+    }
+
+    5% {
+        clip-path: inset(.4em 0 .8em 0);
+    }
+
+    10% {
+        clip-path: inset(.8em 0 .4em 0);
+    }
+
+    15% {
+        clip-path: inset(1em 0 .1em 0);
+    }
+
+    20% {
+        clip-path: inset(.6em 0 .3em 0);
+    }
+
+    25% {
+        clip-path: inset(.3em 0 .6em 0);
+    }
+
+    30% {
+        clip-path: inset(.5em 0 .8em 0);
+    }
+
+    35% {
+        clip-path: inset(.1em 0 1em 0);
+    }
+
+    40% {
+        clip-path: inset(.35em 0 .7em 0);
+    }
+
+    45% {
+        clip-path: inset(.2em 0 .5em 0);
+    }
+
+    50% {
+        clip-path: inset(.5em 0 .2em 0);
+    }
+
+    55% {
+        clip-path: inset(.7em 0 .35em 0);
+    }
+
+    60% {
+        clip-path: inset(.9em 0 .1em 0);
+    }
+
+    65% {
+        clip-path: inset(.46em 0 .8em 0);
+    }
+
+    70% {
+        clip-path: inset(.3em 0 .66em 0);
+    }
+
+    75% {
+        clip-path: inset(.23em 0 .48em 0);
+    }
+
+    80% {
+        clip-path: inset(.48em 0 .23em 0);
+    }
+
+    85% {
+        clip-path: inset(.79em 0 .39em 0);
+    }
+
+    90% {
+        clip-path: inset(.66em 0 .33em 0);
+    }
+
+    95% {
+        clip-path: inset(.3em 0 1em 0);
+    }
+
+    100% {
+        clip-path: inset(.29em 0 .62em 0);
+    }
+}
+
+.mu {
+    font-family: "modao";
+    /* font-size: 150px; */
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 50px;
+}
+
+
+.light1 :hover {
+    scale: 1.15;
+}
+
+.light1 .tooltiptext1 {
+    font-family: 'circle';
+    visibility: hidden;
+    width: 50vw;
+    background-color: rgba(163, 163, 163, 0.8);
+    color: #fff;
+    /* text-align: center; */
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 5;
+
+    bottom: 30vh;
+    left: 25vw;
+    line-height: 30px;
+    text-indent: 2em;
+}
+
+.jiema {
+    color: rgba(18, 18, 22, 0.7);
+    text-indent: 2em;
+}
+
+.light1:hover .tooltiptext1 {
+    visibility: visible;
+}
+.light1 .tooltiptext1 img{
+    width: 280px;
+    position: relative;
+    display: block;
+    margin: 15px auto ;
+    
+}
+.light2 .tooltiptext2 img{
+    width: 280px;
+    position: relative;
+    display: block;
+    margin: 15px auto ;
+    
+}
+.light3 .tooltiptext3 img{
+    width: 280px;
+    position: relative;
+    display: block;
+    margin: 15px auto ;
+    
+}
+
+.light2 :hover {
+    scale: 1.15;
+}
+
+.light2 .tooltiptext2 {
+    font-family: 'circle';
+    visibility: hidden;
+    width: 60vw;
+    background-color: rgba(163, 163, 163, 0.8);
+    color: #fff;
+    /* text-align: center; */
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 5;
+    bottom: 10vh;
+    left: 8vw;
+    line-height: 30px;
+    text-indent: 2em;
+}
+
+.light2:hover .tooltiptext2 {
+    visibility: visible;
+}
+
+
+.light3 :hover {
+    scale: 1.15;
+}
+
+.light3 .tooltiptext3 {
+    font-family: 'circle';
+    visibility: hidden;
+    width: 30vw;
+    background-color:rgba(163, 163, 163, 0.8);
+    color: #fff;
+    /* text-align: center; */
+    border-radius: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+
+    /* 定位 */
+    position: absolute;
+    z-index: 5;
+    bottom: 10vh;
+    left:35vw;
+    line-height: 30px;
+    text-indent: 2em;
+}
+
+.light3:hover .tooltiptext3 {
+    visibility: visible;
+}
+
+
+.draggable {
+	cursor: move;
+	display: inline-block;
+}
+
+.stoneimg1 {
+	width: 28vw;
+	left: 48vw;
+	top:30vh;
+	z-index: 1;
+	position: relative;
+}
+.stoneimg2 {
+	width: 35vw;
+	left: 33vw;
+	top:32vh;
+	z-index: 2;
+	position: relative;
+}
+
+.magic_intro {
+    font-family: 'pixel';
+    font-size: 28px;
+    letter-spacing: 5px;
+    line-height: 40px;
+}
+
+.magic-code1 {
+    font-size: 15px;
+    color: gray;
+}
+
+.magic-code1:hover::after {
+    content: "系统平台安全：基础设施、网络系统、数据采集、数据存储、数据处理等多层次安全防护技术。";
+}
+
+.magic-code2 {
+    font-size: 15px;
+    color: gray;
+}
+
+.magic-code2:hover::after {
+    content: "平台安全运维：风险管理、系统评测等技术和管理类标准。";
+}
+
+.magic-code3 {
+    font-size: 15px;
+    color: gray;
+}
+
+.magic-code3:hover::after {
+    content: "安全相关技术：分布式安全计算、安全存储、数据溯源、密钥服务、细粒度审计等安全防护技术。";
+}
+
+
+.book-article p {
+    color: #4d2810;
+    font-family: 'ming';
+    font-weight: 400;
+}
+
+.book-article {
+    width: 80%;
+    margin: 60px auto;
+
+}
+
+.book-article4 {
+    margin: 150px auto;
+}
+
+.magicbook-code1 {
+    font-size: 15px;
+    color: gray;
+}
+
+.magicbook-code1:hover::after {
+    width: 80%;
+    content: "《数据二十条》提出分别界定数据生产、流通、使用过程中各参与方享有的合法权利，建立数据资源持有权、数据加工使用权、数据产品经营权等“三权分置”的产权运行机制。在依法依规前提下，通过合同、协议等方式，数据持有者有权利授权数据处理者进行加工、开发、使用，促进“专业的人做专业的事”，形成数据产品和服务，为经济社会发展做贡献。";
+}
+
+
+/* @keyframes animateOnClick {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.2);
+    }
+    100% {
+    transform: scale(1);
+    }
+  }  */
+/* 心脏跳动 */
+
+@keyframes mask {
+    from {
+        mask-size: 0 0;
+    }
+
+    to {
+        mask-size: 300% 300%;
+    }
+}
+
+
+@property --radius {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: -5%;
+}
+
+@keyframes scene-transition {
+    to {
+        --radius: 105%;
+    }
+}
+
+.scenes {
+    position: relative;
+    aspect-ratio: 2.4 / 1;
+    outline: 2px solid #ccc;
+}
+
+.scene-1,
+.scene-2 {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+}
+
+.scene-1 {
+    background-image: url(../img/wildplace.png);
+}
+
+.scene-2 {
+    background-image: url(../img/prospective.png);
+    z-index: -1;
+    -webkit-mask-image: radial-gradient(circle,
+            #fff calc(var(--radius) - 5%),
+            transparent calc(var(--radius) + 5%));
+}
+
+.scenes:is(:checked, :focus) .scene-2 {
+    z-index: 1;
+    animation: scene-transition 4s linear forwards 1;
+}
+
+
+
+/* everything else */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+.scenes:is(:checked, :focus) {
+    background-image: radial-gradient(circle, #fff calc(var(--radius) - 5%), transparent calc(var(--radius) + 5%));
+    animation: scene-transition 2s linear forwards 1;
+}
+
+.fadein {
+    animation: FadeIn 2.5s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+        letter-spacing: 18px;
+        text-shadow: 2px 2px 30px #fb9c59;
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 0.2em;
+        text-shadow: 0 0 0px #fb9c59;
+    }
+}
+.fadein1 {
+    animation: FadeIn1 2.5s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+@keyframes FadeIn1 {
+    0% {
+        opacity: 0;
+        letter-spacing: 18px;
+        text-shadow: 4px 4px 50px #ff9245;
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 0.2em;
+        text-shadow: 1px 1px 5px #ff9245;
+    }
+}
+.fadein2 {
+    animation: FadeIn2 2.5s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+@keyframes FadeIn2 {
+    0% {
+        opacity: 0;
+        letter-spacing: 18px;
+        text-shadow: 4px 4px 50px #252c78;
+    }
+
+    100% {
+        opacity: 1;
+        letter-spacing: 0.2em;
+        text-shadow: 0px 0px 0px #252c78;
+    }
+}
+
+.chevron {
+    position: absolute;
+    width: 2vw;
+    height: 1vh;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #ffffff;
+}
+
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(25px);
+    }
+
+    67% {
+        opacity: 1;
+        transform: translateY(38px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(51px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
+@keyframes pulse {
+    to {
+        opacity: 1;
+    }
+}
+
+.chevron2 {
+    position: absolute;
+    width: 2vw;
+    height: 1vh;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+}
+
+.chevron2:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.chevron2:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.chevron2:before,
+.chevron2:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: rgb(247, 201, 141);
+}
+
+.chevron2:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.chevron2:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+.magic-container{
+    font-family: 'ming';
+    letter-spacing: 0.2em;
+}
+.todolist{
+    transform: scale(1.1);
+}
+.zhogndian{
+    font-weight: 600;
+    font-size: 20px;
+}

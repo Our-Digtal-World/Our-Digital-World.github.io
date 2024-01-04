@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇重构</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+        }
+        @font-face {
+            font-family: "ming";
+            font-display: auto;
+            src: url("../../font/Mingchao.otf");
+            font-weight: normal;
+            font-style: normal;
+        }
+        button {
+            font-family: ming;
+            width: 10em;
+            height: 4em;
+            color: white;
+            font-size: 18px;
+            background-color: transparent;
+            text-decoration: none;
+            border-style: dashed;
+            border-width: 2px;
+            margin: 10px;
+            font-weight: bold;
+            border-color: white;
+            letter-spacing: 5px;
+
+        }
+
+        button:hover {
+            border-width: 3px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="can" width="400" height="400" style="background-color: black;margin: 30px;">对不起，您的浏览器不支持canvas</canvas>
+    <div class="button-container">
+        <button id="gameBtn">开始游戏</button>
+        <a href="index.html"><button id="gameBtn">退出无尽模式</button></a>
+    </div>
+    <script>
+        var gameStarted = false;
+        // 标记游戏是否已经开始的变量  
+
+        // 初始化游戏函数  
+        function initGame() {
+            // 在这里放置您的游戏初始化代码  
+            var snake = [41, 40],       //snake队列表示蛇身，初始节点存在但不显示
+                direction = 1,          //1表示向右，-1表示向左，20表示向下，-20表示向上
+                food = 43,              //食物的位置
+                n,                      //与下次移动的位置有关
+                box = document.getElementById('can').getContext('2d');//从0到399表示box里[0~19]*[0~19]的所有节点，每20px一个节点
+            foodCount = 0;// 食物计数器  
+            function drawfood(seat, color) {
+                box.drawImage(image, seat % 20 * 20 + 1, ~~(seat / 20) * 20 + 1, 18, 18);
+            }
+            var image;
+            function draw(seat, color, removable) {
+                if (removable) {
+                    // 绘制一个可移除的部分  
+                    box.fillStyle = "black";
+                    box.fillRect(seat % 20 * 20 + 1, ~~(seat / 20) * 20 + 1, 18, 18);
+                } else {
+                    // 正常绘制图像  
+                    box.drawImage(image, seat % 20 * 20 + 1, ~~(seat / 20) * 20 + 1, 18, 18);
+                }
+            }
+            document.onkeydown = function (evt) {
+                // 定义WASD键对应的方向  
+                var directions = {
+                    'W': 1,
+                    'A': 0,
+                    'S': 3,
+                    'D': 2,
+                    'w': 1,
+                    'a': 0,
+                    's': 3,
+                    'd': 2
+                };
+
+                // 检查按下的键是否是WASD键，并获取对应的方向  
+                if (evt.key in directions) {
+                    var directionIndex = directions[evt.key];
+
+                    // 根据方向改变蛇的移动方向  
+                    direction = snake[1] - snake[0] == (n = [-1, -20, 1, 20][directionIndex] || direction) ? direction : n;
+                }
+            };
+            image = new Image(); // 创建新的Image对象  
+            image.src = '1.png'; // 设置图片路径  
+            image.onload = function () {
+                // 当图片加载完成后绘制图片  
+
+                snake.unshift(n = snake[0] + direction);
+                //此时的n为下次蛇头出现的位置，n进入队列
+                if (snake.indexOf(n, 1) > 0 || n < 0 || n > 399 || direction == 1 && n % 20 == 0 || direction == -1 && n % 20 == 19) {
+                    //if语句判断贪吃蛇是否撞到自己或者墙壁，碰到时返回，结束程序
+                    return alert("碰壁啦！");
+                }
+
+
+
+                draw(n, "lime", false);        //画出蛇头下次出现的位置
+                if (n == food) {         //如果吃到食物时，产生一个蛇身以外的随机的点，不会去掉蛇尾
+                    while (snake.indexOf(food = ~~(Math.random() * 400)) > 0);
+                    drawfood(food, "yellow");
+                    foodCount++;         // 每吃到一次食物，计数器加1  
+                } else {                //没有吃到食物时正常移动，蛇尾出队列
+                    draw(snake.pop(), "black", true);
+                }
+                setTimeout(arguments.callee, 150); //每隔0.15秒执行函数一次，可以调节蛇的速度 
+
+            }();
+            console.log("游戏开始了！");
+            document.getElementById('gameBtn').innerText = "重新开始"; // 更改按钮文本为“重新开始”  
+
+            gameStarted = true; // 设置游戏已经开始  
+        }
+
+        // 重新开始游戏函数  
+        function restartGame() {
+            clearCanvas();
+            var snake = [41, 40],       //snake队列表示蛇身，初始节点存在但不显示
+                direction = 1,          //1表示向右，-1表示向左，20表示向下，-20表示向上
+                food = 43,              //食物的位置
+                n,                      //与下次移动的位置有关
+                box = document.getElementById('can').getContext('2d');//从0到399表示box里[0~19]*[0~19]的所有节点，每20px一个节点
+            foodCount = 0;// 食物计数器  
+            function drawfood(seat, color) {
+                box.drawImage(image, seat % 20 * 20 + 1, ~~(seat / 20) * 20 + 1, 18, 18);
+            }
+            var image;
+            function clearCanvas() {
+                var canvas = document.getElementById('can');
+                var ctx = canvas.getContext('2d');
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空画布  
+            }
+            function draw(seat, color, removable) {
+                if (removable) {
+                    // 绘制一个可移除的部分  
+                    box.fillStyle = "black";
+                    box.fillRect(seat % 20 * 20 + 1, ~~(seat / 20) * 20 + 1, 18, 18);
+                } else {
+                    // 正常绘制图像  
+                    box.drawImage(image, seat % 20 * 20 + 1, ~~(seat / 20) * 20 + 1, 18, 18);
+                }
+            }
+            document.onkeydown = function (evt) {
+                // 定义WASD键对应的方向  
+                var directions = {
+                    'W': 1,
+                    'A': 0,
+                    'S': 3,
+                    'D': 2,
+                    'w': 1,
+                    'a': 0,
+                    's': 3,
+                    'd': 2
+                };
+
+                // 检查按下的键是否是WASD键，并获取对应的方向  
+                if (evt.key in directions) {
+                    var directionIndex = directions[evt.key];
+
+                    // 根据方向改变蛇的移动方向  
+                    direction = snake[1] - snake[0] == (n = [-1, -20, 1, 20][directionIndex] || direction) ? direction : n;
+                }
+            };
+            image = new Image(); // 创建新的Image对象  
+            image.src = '1.png'; // 设置图片路径  
+            image.onload = function () {
+                // 当图片加载完成后绘制图片  
+
+                snake.unshift(n = snake[0] + direction);
+                //此时的n为下次蛇头出现的位置，n进入队列
+                if (snake.indexOf(n, 1) > 0 || n < 0 || n > 399 || direction == 1 && n % 20 == 0 || direction == -1 && n % 20 == 19) {
+                    //if语句判断贪吃蛇是否撞到自己或者墙壁，碰到时返回，结束程序
+                    return alert("很遗憾!你没有成功收集线索！请再来一次吧！");
+                }
+
+
+
+                draw(n, "lime", false);        //画出蛇头下次出现的位置
+                if (n == food) {         //如果吃到食物时，产生一个蛇身以外的随机的点，不会去掉蛇尾
+                    while (snake.indexOf(food = ~~(Math.random() * 400)) > 0);
+                    drawfood(food, "yellow");
+                    foodCount++;         // 每吃到一次食物，计数器加1  
+                } else {                //没有吃到食物时正常移动，蛇尾出队列
+                    draw(snake.pop(), "black", true);
+                }
+                setTimeout(arguments.callee, 150); //每隔0.15秒执行函数一次，可以调节蛇的速度 
+
+            }();
+            console.log("游戏重新开始了！");
+            // 可以重置游戏变量、状态等  
+        }
+
+        document.getElementById('gameBtn').addEventListener('click', function () {
+            if (!gameStarted) {
+                initGame(); // 如果游戏尚未开始，则初始化游戏  
+            } else {
+                restartGame(); // 如果游戏已经开始，则重新开始游戏  
+            }
+        });
+
+    </script>
+</body>
+
+</html>
